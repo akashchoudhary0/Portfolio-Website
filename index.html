@@ -1,97 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash - Developer Portfolio</title>
-    <link rel="stylesheet" href="1.css">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Akash choudhary-portfolio</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="left">My Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Project</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Hi my name is <span class="purple">Akash</span>
-                <div>and there's my portfolio website</div>
-                <span id="element"></span>
-                <div class="resgit">
-                    <div class="resume">
-                        <a href="">Download Resume</a>
-                    </div>
-                    <div class="github">
-                        <a href="https://github.com/akash230203">Visit github</a>
-                    </div>
+
+<body class="">
+    <!-- Navbar Container -->
+    <nav class="bg-gray-950 p-4 rounded-t-lg">
+        <div class="max-w-7xl md:mx-16 flex justify-between items-center">
+            <!-- Left side: Links -->
+            <div class="flex items-center space-x-4">
+                <!-- Desktop & Tablet Navigation Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="http://127.0.0.1:5500/index.html" class="text-white hover:text-gray-300">Home</a>
+                    <a href="http://127.0.0.1:5500/services.html" class="text-white hover:text-gray-300">Services</a>
+                    <a href="http://127.0.0.1:5500/about.html" class="text-white hover:text-gray-300">About</a>
+                    <a href="http://127.0.0.1:5500/contact.html" class="text-white hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="rightsection">
-                <img src="image1.png" alt="">
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="text-gray">What i have done</span>
-            <h1>Work Experience</h1>
-            <div class="box">
-                
-            </div>
-            <div class="work-experience">
-                <div class="project">
-                    <h3>Projects</h3>
-                    <ul>
-                        <li>Portfolio website</li>
-                        <li>Amazon clone</li>
-                    </ul>
+
+            <!-- Right side: Logo -->
+            <div class="flex items-center md:mr-32">
+                <div class="hidden md:flex">
+                    <img src="logo1.img.png" alt="Logo" class="h-12 w-auto">
                 </div>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>Java script</li>
-                        <li>Node js</li>
-                        <li>C</li>
-                        <li>Java</li>
-                    </ul>
+                <div class="md:hidden">
+                    <img src="logo1.img.png" alt="Logo" class="h-8 w-auto">
                 </div>
-            </div>
-        </section>
-        <seciton class="thirdsection">
-            
-        </seciton>
-    </main> 
-    <footer class="footer">
-        <div class="a">Visit on my social media accounts </div>
-        <div class="first">
-           <div class="instagram">
-              <img src="instagram.jpg" alt="">
-              <a href=https://www.instagram.com/akash_choudhary_23?igsh=MTFoY2pvdHBhMzU2ag=="">Instagram</a>
-            </div>
-            <div class="facebook">
-                <img src="facebook.png" alt="">
-                <a href="https://www.facebook.com/profile.php?id=100086919825918&mibextid=ZbWKwL">Facebook</a>
             </div>
         </div>
-        <div class="last">www.akashchoudharyonline.com</div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-gray-950 bg-opacity-75 flex justify-center items-center z-50 hidden">
+        <div class="bg-white rounded-lg p-4 w-3/4">
+            <!-- Close Button -->
+            <div class="flex justify-end">
+                <button id="mobile-menu-close" class="text-gray-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu Links -->
+            <div class="mt-4 space-y-4">
+                <a href="http://127.0.0.1:5500/index.html" class="block text-gray-800 hover:text-gray-600">Home</a>
+                <a href="http://127.0.0.1:5500/services.html" class="block text-gray-800 hover:text-gray-600">Services</a>
+                <a href="http://127.0.0.1:5500/about.html" class="block text-gray-800 hover:text-gray-600">About</a>
+                <a href="http://127.0.0.1:5500/contact.html" class="block text-gray-800 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Optional: JavaScript for mobile menu functionality -->
+    </div>
+
+
+    <div class="bg-gray-950 w-auto h-screen"> <!--main container-->
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="left items-center md:w-2/4 grid items-center">
+                <div class="ml-20 md:my-36">
+                    <p class="text-yellow-500 font-mono">
+                        Hello,welcome
+                    </p>
+                    <div class="text-gray-300 hover:text-gray-50 text-3xl">
+                        I'm Akash Choudhary
+                    </div>
+                    <div class="text-fuchsia-500 text-3xl ">
+                        <span id="element"></span>
+                    </div>
+                    <div class="text-gray-500 hover:text-gray-400 w-3/4">"Turning ideas into reality with code and
+                        creativity. As a passionate developer, I specialize in building innovative and seamless web
+                        solutions that bring your vision to life. Let's create something extraordinary together."
+                    </div>
+                </div>
+            </div>
+            <div class="right  md:w-2/4 object-center flex justify-center items-center w-full my-10 ">
+                <div class="w-52 h-52 ">
+                    <img src="mypic.jpg" alt="" class="rounded-full w-full h-full">
+                </div>
+            </div>
+        </div>
+
+        <dvi class="flex flex-col md:flex-row mt-10 justify-center items-center space-x-3 w-full">
+            <a href="resumefinal.pdf">
+                <div
+                    class="bg-yellow-500 w-64 font-bold ml-3 md:ml-0 hover:bg-yellow-400 h-12 rounded-3xl text-black hover:text-sm flex items-center justify-center hover">
+                    Download Resume
+                </div>
+            </a>
+            <a href="https://github.com/akash230203">
+                <div
+                    class="bg-yellow-500 w-64 font-bold mt-3 md:mt-0 hover:bg-yellow-400 h-12 rounded-3xl text-black hover:text-sm flex items-center justify-center hover">
+                    Visit Github
+                </div>
+            </a>
+        </dvi>
+
+    </div>
+    <div class="bg-gray-300 h-px">
+
+    </div>
+    <footer class="bg-gray-950 h-10 flex items-center justify-center text-white">
+        @Copyright 2024. All rights reserved.
     </footer>
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-menu-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['developer', '&amp; portfolio'],
-          typeSpeed: 50,
+            strings: ['A Web Developer',' Code with Purpose, Design with Passion','Transforming Ideas into Digital Reality'],
+            typeSpeed: 80,
         });
-      </script>
+    </script>
+
 </body>
+
 </html>
