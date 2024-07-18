@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Services</title>
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <nav class="bg-gray-950 p-4 rounded-t-lg">
+        <div class="max-w-7xl md:mx-16 flex justify-between items-center">
+            <!-- Left side: Links -->
+            <div class="flex items-center space-x-4">
+                <!-- Desktop & Tablet Navigation Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="http://127.0.0.1:5500/index.html" class="text-white hover:text-gray-300">Home</a>
+                    <a href="http://127.0.0.1:5500/services.html" class="text-white hover:text-gray-300">Services</a>
+                    <a href="http://127.0.0.1:5501/about.html" class="text-white hover:text-gray-300">About</a>
+                    <a href="http://127.0.0.1:5500/about.html" class="text-white hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right side: Logo -->
+            <div class="flex items-center md:mr-32">
+                <div class="hidden md:flex">
+                    <img src="logo1.img.png" alt="Logo" class="h-12 w-auto">
+                </div>
+                <div class="md:hidden">
+                    <img src="logo1.img.png" alt="Logo" class="h-8 w-auto">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-gray-950 bg-opacity-75 flex justify-center items-center z-50 hidden">
+        <div class="bg-white rounded-lg p-4 w-3/4">
+            <!-- Close Button -->
+            <div class="flex justify-end">
+                <button id="mobile-menu-close" class="text-gray-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu Links -->
+            <div class="mt-4 space-y-4">
+                <a href="http://127.0.0.1:5500/index.html" class="block text-gray-800 hover:text-gray-600">Home</a>
+                <a href="http://127.0.0.1:5500/services.html" class="block text-gray-800 hover:text-gray-600">Services</a>
+                <a href="http://127.0.0.1:5501/about.html" class="block text-gray-800 hover:text-gray-600">About</a>
+                <a href="http://127.0.0.1:5500/about.html" class="block text-gray-800 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Optional: JavaScript for mobile menu functionality -->
+    </div>
+
+
+    <div class="bg-gray-950 w-full h-screen text-white pt-9"> <!-- conatainer-->
+       
+        <div class="container ">
+            <div class="text-3xl text-yellow-500  text-center h-24 w-full ">What I Do</div>
+        </div>
+        <div class="service flex flex-col md:flex-row items-center justify-center space-x-3 ">
+            <div class="border-2 rounded-lg border-fuchsia-500 mb-3 p-2"><h1>Web Development</h1></div>
+            <div class="border-2 rounded-lg border-fuchsia-500 mb-3 p-2"><h1>Digital Marketing</h1></div>
+            <div class="border-2 rounded-lg border-fuchsia-500 mb-3 p-2"><h1>Web Hosting</h1></div>
+        </div>
+        <div class="image-slider ">
+
+        </div>
+
+    </div>
+
+    <div class="bg-gray-300 h-px">
+
+    </div>
+    <footer class="bg-gray-950 h-10 flex items-center justify-center text-white">
+        @Copyright 2024. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-menu-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+    </div>
+</body>
+
+</html>
