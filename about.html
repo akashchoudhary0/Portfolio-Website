@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About</title>
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <nav class="bg-gray-950 p-4 rounded-t-lg">
+        <div class="max-w-7xl md:mx-16 flex justify-between items-center">
+            <!-- Left side: Links -->
+            <div class="flex items-center space-x-4">
+                <!-- Desktop & Tablet Navigation Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="http://127.0.0.1:5500/index.html" class="text-white hover:text-gray-300">Home</a>
+                    <a href="http://127.0.0.1:5500/services.html" class="text-white hover:text-gray-300">Services</a>
+                    <a href="http://127.0.0.1:5500/about.html" class="text-white hover:text-gray-300">About</a>
+                    <a href="http://127.0.0.1:5500/contact.html" class="text-white hover:text-gray-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right side: Logo -->
+            <div class="flex items-center md:mr-32">
+                <div class="hidden md:flex">
+                    <img src="logo1.img.png" alt="Logo" class="h-12 w-auto">
+                </div>
+                <div class="md:hidden">
+                    <img src="logo1.img.png" alt="Logo" class="h-8 w-auto">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-gray-950 bg-opacity-75 flex justify-center items-center z-50 hidden">
+        <div class="bg-white rounded-lg p-4 w-3/4">
+            <!-- Close Button -->
+            <div class="flex justify-end">
+                <button id="mobile-menu-close" class="text-gray-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu Links -->
+            <div class="mt-4 space-y-4">
+                <a href="http://127.0.0.1:5500/index.html" class="block text-gray-800 hover:text-gray-600">Home</a>
+                <a href="http://127.0.0.1:5500/services.html" class="block text-gray-800 hover:text-gray-600">Services</a>
+                <a href="http://127.0.0.1:5501/about.html" class="block text-gray-800 hover:text-gray-600">About</a>
+                <a href="http://127.0.0.1:5500/about.html"
+                    class="block text-gray-800 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Optional: JavaScript for mobile menu functionality -->
+    </div>
+
+    <div class="bg-gray-950 w-full h-screen"> <!-- conatainer-->
+        <div class="">
+            <div class="text-white mx-8 md:mx-20">Mob.- <p class="text-blue-600 underline hover:text-blue-400">
+                    7049071334</p>
+            </div>
+            <div class="text-white mx-8 md:mx-20">Email - <p class="text-blue-600 underline  hover:text-blue-400">
+                    akash230203@gmail.com</p>
+            </div>
+        </div>
+        <div class="mt-5">
+            <p class="text-white mx-8 md:mx-20 font-semibold">Welcome to my portfolio! I'm a passionate Computer Science
+                Engineering student embarking on an
+                exciting journey in web development. I've recently built this portfolio and created several website
+                clones to showcase my skills. I'm eager to help you bring your vision to life by designing and
+                developing your perfect website. Let's collaborate to create something amazing!</p>
+        </div>
+        <div class="w-full h-28 my-10 text-white flex space-x-3 justify-center items-center font-semibold  ">
+            <div class="mb-3 mr-3">
+                <a class="flex flex-row"
+                    href="https://www.instagram.com/akash_choudhary_23?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                        class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a class="flex flex-row" href=""><i class=" fa-brands fa-facebook"></i>
+            </div>
+            <div class="mb-3">
+                <a class="flex flex-row" href="https://www.linkedin.com/in/akash-choudhary-86b134301/"><i class=" fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a class="flex flex-row" href="">
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-300 h-px">
+
+    </div>
+    <footer class="bg-gray-950 h-10 flex items-center justify-center text-white">
+        @Copyright 2024. All rights reserved.
+    </footer>
+
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-menu-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+    </div>
+</body>
+
+</html>
