@@ -71,12 +71,55 @@
         <!-- Optional: JavaScript for mobile menu functionality -->
     </div>
 
+    
+    <?php
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $number = $_POST['number'];
+        $message = $_POST['message'];
+       
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "contact";
+
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $database);
+
+        // Check connection
+        if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+        }else{
+       
+        $sql ="INSERT INTO `contact` ( `NAME`, `Emails`, `number`, `message`,`tstamp`) VALUES ( '$name', '$email', '$number', '$message',current_timestamp())";
+        $result = mysqli_query($conn,$sql);
+
+        if($result){
+            echo'<div class="alert alert-success" role="alert">
+                Your Entry has bees successfully register!
+             </div>';
+        }else{
+            echo"the record was not inserted successfully -->". mysqli_error($conn);
+        }
+
+        }
+
+
+
+
+
+
+    }
+    ?>
+
     <div class="bg-gray-950 w-full h-screen"> <!-- conatainer-->
         <div class="text-fuchsia-500 text-center text-3xl">
            Get in Touch
         </div>
         <div class="w-3/4  mx-8 md:mx-20 mt-5">
-            <form action="your-server-endpoint" method="POST">
+            <form action="./contact.html" method="POST">
                 <div class="mb-4">
                     <label for="name" class="block text-white text-sm font-bold mb-2">Name</label>
                     <input type="text" id="name" name="name"
